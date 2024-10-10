@@ -920,8 +920,7 @@ def get_rope(
         rotary_emb = RotaryEmbedding(head_size, rotary_dim, max_position, base,
                                      is_neox_style, dtype)
     else:
-        scaling_type = rope_scaling[
-            "type"] if "type" in rope_scaling else rope_scaling["rope_type"]
+        scaling_type = rope_scaling["rope_type"]
 
         if scaling_type == "llama3":
             scaling_factor = rope_scaling["factor"]
